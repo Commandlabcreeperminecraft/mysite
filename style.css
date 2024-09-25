@@ -181,18 +181,15 @@ article {
 }
 
 section {
-  margin: 20px;
   margin-top: 20px;
   margin-bottom: 200px;
   border-radius: 10px;
   width:1250px;
   margin-left: 20px;
-  padding-top: 100px;
 }
 
 .tab {
   max-width: 800px;
-  margin: 0 auto;
   margin-top: 120px;
 }
 
@@ -239,6 +236,7 @@ section {
   min-height: 400px; /* テキスト量が多くなっても対応できるように */
   padding: 10px 30px;
   border-radius: 10px;
+  width: 1435px;
 }
 
 .tab__panel-box001 {
