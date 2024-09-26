@@ -1,4 +1,5 @@
-@charset "utf-8";                       /* utf-8設定 */
+@charset "utf-8";
+/* utf-8設定 */
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
@@ -6,9 +7,66 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  color: #ce38bf;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #8e44ad;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nonemode {
+  display: none;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.allfilehidden {
+  display: none;
 }
 
 .sportslist-animation-mode {
@@ -17,10 +75,16 @@
 
 body {
   all: unset;
-  background-color: whitesmoke;
+  background: linear-gradient(45deg, #8e44ad, #3498db);
   display: flex;
   flex-direction: column;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.login-container1 {
+  display: none;
 }
 
 .top-memu-styles-one {
@@ -37,70 +101,98 @@ body {
   padding-right: 60px;
   margin-left: 50px;
   margin-right: 50px;
-  
+
 }
 
-body{
+body {
   overflow-x: hidden;
+  margin-left: 0;
+  margin-top: 151px;
 }
-.header-area{
+
+.header-area {
   display: flex;
   justify-content: space-between;
   height: 65px;
   padding: 0 20px;
   align-items: center;
 }
-.hamburger{
+
+.hamburger {
   width: 40px;
   height: 25px;
-  position:fixed;
-  transition: .5s;/* 追記 */
+  margin-top: 150px;
+  position: fixed;
+  transition: .5s;
+  /* 追記 */
 }
-.hamburger span{
+
+.hamburger span {
   position: absolute;
   width: 100%;
   height: 1px;
   background-color: blue;
-  transition: .5s;/* 追記 */
+  transition: .5s;
+  /* 追記 */
 }
-.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+
+.hamburger span:first-of-type {
+  /* ハンバーガーメニューの1番目の線 */
   top: 0;
 }
-.hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+
+.hamburger span:nth-of-type(2) {
+  /* ハンバーガーメニューの2番目の線 */
   top: 50%;
 }
-.hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+
+.hamburger span:last-of-type {
+  /* ハンバーガーメニューの3番目の線 */
   top: 100%;
 }
-.slide-menu{
+
+.slide-menu {
   background-color: rgba(0, 0, 0, .8);
   position: fixed;
   top: 65px;
   width: 100%;
   left: 0;
   transform: translateX(100%);
-  transition: .5s;/* 追記 */
+  transition: .5s;
+  /* 追記 */
 }
-.slide-menu li{
+
+.slide-menu li {
   color: #fff;
   line-height: 400%;
   text-align: center;
 }
-.hamburger.active{/* 追記 */
-  transform: rotateY(360deg);/* 追記 */
+
+.hamburger.active {
+  /* 追記 */
+  transform: rotateY(360deg);
+  /* 追記 */
 }
-.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+
+.hamburger.active span:first-of-type {
+  /* ハンバーガーメニューの1番目の線 */
   top: 50%;
   transform: rotate(45deg);
 }
-.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
-  opacity: 0;/* 透明にする */
+
+.hamburger.active span:nth-of-type(2) {
+  /* ハンバーガーメニューの2番目の線 */
+  opacity: 0;
+  /* 透明にする */
 }
-.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+
+.hamburger.active span:last-of-type {
+  /* ハンバーガーメニューの3番目の線 */
   top: 50%;
   transform: rotate(-45deg);
 }
-.slide-menu.active{
+
+.slide-menu.active {
   transform: translateX(0);
 }
 
@@ -110,7 +202,7 @@ body{
   background-color: rgb(0, 255, 94);
   border-radius: 20px;
   margin-left: 70px;
-  margin-top: 10px;
+  margin-top: 60px;
   margin-bottom: 20px;
   flex-direction: row;
   margin-bottom: 20px;
@@ -118,7 +210,7 @@ body{
   /* padding-left: 60px; */
   padding-right: 60px;
   height: 90px;
-  
+
 }
 
 .memulist-1-text {
@@ -132,13 +224,13 @@ body{
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-  }
-  
-  /* マウスオーバーした際の背景 */
-  .btn_hover:hover2 {
-   color :#37beb0;
-  }
+  transition: all 0.3s ease;
+}
+
+/* マウスオーバーした際の背景 */
+.btn_hover:hover2 {
+  color: #37beb0;
+}
 
 .memu-logo {
   padding: 5px;
@@ -160,7 +252,7 @@ article {
   display: flex;
   flex-direction: column;
   border: 3px solid black;
-  width:200px;
+  width: 200px;
   padding-left: 20px;
   padding-top: 5px;
   background-color: white;
@@ -184,21 +276,24 @@ section {
   margin-top: 20px;
   margin-bottom: 200px;
   border-radius: 10px;
-  width:1250px;
+  width: 1250px;
   margin-left: 20px;
 }
 
 .tab {
   max-width: 800px;
   margin-top: 120px;
+  color: black;
 }
 
 /* タブメニュー */
 .tab__menu {
   display: flex;
-  align-items: flex-end; /* メニューを下揃え&高さを調整 */
+  align-items: flex-end;
+  /* メニューを下揃え&高さを調整 */
   justify-content: center;
-  min-height: 50px; /* メニュー切替時にタブがズレないように */
+  min-height: 50px;
+  /* メニュー切替時にタブがズレないように */
   padding: 0;
   margin: 0;
 }
@@ -206,14 +301,16 @@ section {
 .tab__menu-item {
   list-style: none;
   width: 200px;
-  padding: 8px 5px; /* メニューに高さを付ける */
+  padding: 8px 5px;
+  /* メニューに高さを付ける */
   text-align: center;
   margin-right: 6px;
   background-color: #cdcdcd;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;
-  transition: all .3s; /* アニメーション */
+  transition: all .3s;
+  /* アニメーション */
 }
 
 .tab__menu-item:last-of-type {
@@ -229,14 +326,15 @@ section {
 
 /* タブパネル */
 .tab__panel {
- width: 100%;
+  width: 100%;
 }
 
 .tab__panel-box {
-  min-height: 400px; /* テキスト量が多くなっても対応できるように */
+  min-height: 400px;
+  /* テキスト量が多くなっても対応できるように */
   padding: 10px 30px;
   border-radius: 10px;
-  width: 1435px;
+  width: 1000px;
 }
 
 .tab__panel-box001 {
@@ -286,7 +384,6 @@ section {
 
 .main-club-memu {
   padding-left: 15px;
-  padding-top: 200px;
   animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
@@ -300,6 +397,7 @@ a.btn--orange {
   background-color: #eb6100;
   padding: 10px;
 }
+
 .btn--orange:hover,
 a.btn--orange:hover {
   color: #fff;
@@ -307,7 +405,7 @@ a.btn--orange:hover {
 }
 
 a.btn--radius {
-   border-radius: 100vh;
+  border-radius: 100vh;
 }
 
 .NEWStitletext {
